@@ -69,6 +69,33 @@ function exibePalavraInterface(palavra) {
     palavraInterface.innerHTML = palavra;
 }
 
+function tentativa(letra) {
+    if (palavraProposta.includes(letra)) {
+        atualizaPalavraInterface(letra);
+    } else {
+        letrasErradasArray.push(letra);
+        letrasErradas.innerHTML = "Letras erradas:" + letrasErradasArray;
+        if (partesBoneco.length > indiceBoneco) {
+            desenhaBoneco();
+        }
+    }
+}
+
+function atualizaPalavraInterface(letra) {
+    let palavraAux = "";
+    for (let i = 0; i < palavraProposta.length; i++) {
+        if (palavraProposta[i] === letra) {
+            palavraAux += letra;
+        } else if (palavraInterface.innerHTML[i] != "-") {
+            palavraAux += palavraInterface.innerHTML[i];
+        } else {
+            palavraAux += "-"
+        }
+    }
+    exibePalavraInterface(palavraAux);
+}
+
+
 
 /*
 Recebe o evento do teclado e passa apenas o valor da letra para a função tentativa
