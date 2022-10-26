@@ -78,6 +78,17 @@ function tentativa(letra) {
         if (partesBoneco.length > indiceBoneco) {
             desenhaBoneco();
         }
+    } verificaFimDeJogo();
+}
+
+function verificaFimDeJogo() {
+    if (!palavraInterface.innerHTML.includes("-")) {
+        exibePalavraInterface("Parabéns, você venceu !!!♥")
+        window.removeEventListener("keypress", retornaLetra);
+    } else if (letrasErradasArray.length >= numTentativas) {
+        desenhaOlhos();
+        exibePalavraInterface("Você Perdeu!!!");
+        window.removeEventListener("keypress", retornaLetra);
     }
 }
 
