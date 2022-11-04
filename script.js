@@ -28,7 +28,7 @@ const categorias = {
     cores: ["bronze", "dourado", "lilás", "salmão", "violeta", "amarelo", "cinza"],
     animais: ["avestruz", "bufalo", "crocodilo", "escorpião", "flamingo", "cavalo", "boi"],
     objetos: ["apagador", "bicicleta", "canivete", "drone", "quadro", "relogio", "mouse"],
-    país: ["armenia", "brasil", "dinamarca", "guatemala", "haiti", "uruguai", "argentina"]
+    país: ["armenia", "brasil", "dinamarca", "guatemala", "haiti", "uruguai", "argentina", "tunisia"]
 };
 
 function retrornaArrayCategorias() {
